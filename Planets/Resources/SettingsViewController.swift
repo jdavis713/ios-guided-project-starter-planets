@@ -30,7 +30,7 @@ class SettingsViewController: UIViewController {
     
     @IBAction func changeShouldShowPluto(_ sender: UISwitch) {
         let userDefaults = UserDefaults.standard
-        userDefaults.set(sender.isOn, forKey: .shouldShowPlutoKey) // now we pass the string with an extension, then create an update views func
+        userDefaults.set(sender.isOn, forKey: .shouldShowPlutoKey) // now we pass the string with an extension, then create an update views func. this is low level persistence 
         
     }
     

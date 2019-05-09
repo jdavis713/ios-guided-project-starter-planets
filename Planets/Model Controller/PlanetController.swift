@@ -32,3 +32,5 @@ class PlanetController {
         
     
 }
+
+//results changes if you have the switch on or off, so depending on the switch the array will be different
