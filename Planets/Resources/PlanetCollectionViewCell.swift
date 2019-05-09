@@ -10,4 +10,10 @@ import UIKit
 
 class PlanetCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet var planetImageView: UIImageView!
+    @IBOutlet var nameLabel: UILabel!
+    
+    
+    
+    
 }

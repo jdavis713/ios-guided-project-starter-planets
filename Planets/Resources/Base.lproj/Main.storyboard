@@ -69,6 +69,10 @@
                                     <constraint firstItem="sfc-BY-Pgn" firstAttribute="leading" secondItem="2va-T7-Kmh" secondAttribute="leading" id="VGj-r1-oqF"/>
                                     <constraint firstAttribute="bottom" secondItem="sfc-BY-Pgn" secondAttribute="bottom" id="lVO-sl-Mud"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="nameLabel" destination="fLS-jH-9cY" id="FWk-pK-jZY"/>
+                                    <outlet property="planetImageView" destination="WjS-db-aDn" id="ua2-Gg-K54"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
