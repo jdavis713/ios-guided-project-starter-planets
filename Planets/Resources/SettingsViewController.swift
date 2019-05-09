@@ -6,25 +6,39 @@
 //  Copyright © 2019 Lambda Inc. All rights reserved.
 //
 
+//After we configured the collection VC, we connect the wiring for the VC
+
 import UIKit
 
+//Step 4: create and extension
+extension String {
+    static var shouldShowPlutoKey = "shouldShowPlutoKey"
+}
+
 class SettingsViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    //step 3: create viewWillAppear func and call our update views
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        updateViews()
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+   //Step 1: create outlets for buttons
+    @IBAction func done(_ sender: Any) {
+        dismiss(animated: true, completion: nil) //we use this because our segue was modal
     }
-    */
-
+    
+    @IBAction func changeShouldShowPluto(_ sender: UISwitch) {
+        let userDefaults = UserDefaults.standard
+        userDefaults.set(sender.isOn, forKey: .shouldShowPlutoKey) // now we pass the string with an extension, then create an update views func
+        
+    }
+    
+    private func updateViews() {
+        let userDefaults = UserDefaults.standard
+        shouldShowPlutoSwitch.isOn = userDefaults.bool(forKey: .shouldShowPlutoKey)
+    }
+    
+    @IBOutlet var shouldShowPlutoSwitch: UISwitch!
+    
 }

@@ -12,6 +12,11 @@ private let reuseIdentifier = "PlanetCell" //step 3: updated corresponding reuse
 
 class PlanetsCollectionViewController: UICollectionViewController {
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        collectionView.reloadData()
+    }
+    
     //step 2: cleaned up boilerplate code and comments
 
     // MARK: UICollectionViewDataSource

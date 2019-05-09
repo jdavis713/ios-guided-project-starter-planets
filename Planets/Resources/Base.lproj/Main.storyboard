@@ -103,18 +103,24 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wI5-uP-KwR">
                                 <rect key="frame" x="322" y="44" width="37" height="30"/>
                                 <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="done:" destination="9rE-Zc-SSd" eventType="touchUpInside" id="N3S-HE-LxG"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="180" translatesAutoresizingMaskIntoConstraints="NO" id="3kg-tz-4Xh">
                                 <rect key="frame" x="16" y="143" width="343" height="31"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Is Pluto a planet?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fF6-S7-zRz">
-                                        <rect key="frame" x="0.0" y="0.0" width="114" height="31"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Is Pluto a planet?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fF6-S7-zRz">
+                                        <rect key="frame" x="0.0" y="0.0" width="130" height="31"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3to-p5-Wu6">
-                                        <rect key="frame" x="294" y="0.0" width="51" height="31"/>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3to-p5-Wu6">
+                                        <rect key="frame" x="310" y="0.0" width="35" height="31"/>
+                                        <connections>
+                                            <action selector="changeShouldShowPluto:" destination="9rE-Zc-SSd" eventType="valueChanged" id="idW-UC-HxG"/>
+                                        </connections>
                                     </switch>
                                 </subviews>
                             </stackView>
@@ -133,6 +139,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="r7H-gu-r7Y"/>
                     </view>
+                    <connections>
+                        <outlet property="shouldShowPlutoSwitch" destination="3to-p5-Wu6" id="cTD-HE-Xnw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8mI-Lq-22H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
